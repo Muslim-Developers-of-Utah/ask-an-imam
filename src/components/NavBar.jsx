@@ -8,42 +8,60 @@ const NavBar = () => {
   };
 
   return (
-    <div className="navbar bg-base-100">
-      <span className="btn btn-ghost normal-case text-3xl">Ask An Imam</span>
-      <button className="btn btn-square btn-ghost lg:hidden"
-      type="button">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          className="inline-block w-5 h-5 stroke-current"
+    <nav className="bg-green-700">
+      <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+        <a href="https://flowbite.com/" className="flex items-center">
+          <span className="self-center text-2xl font-semibold whitespace-nowrap text-white">
+            Ask An Imam
+          </span>
+        </a>
+        <button
+          onClick={toggleMenu}
+          data-collapse-toggle="navbar-default"
+          type="button"
+          className="inline-flex items-center p-2 ml-3 text-sm  rounded-lg md:hidden  focus:outline-none focus:ring-2 text-gray-400 hover:bg-gray-700 focus:ring-gray-600"
+          aria-controls="navbar-default"
+          aria-expanded="false"
         >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            d="M4 6h16M4 12h16M4 18h16"
-          ></path>
-        </svg>
-      </button>
-      <div
+          <svg
+            className="w-6 h-6"
+            aria-hidden="true"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fillRule="evenodd"
+              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+              clipRule="evenodd"
+            ></path>
+          </svg>
+        </button>
+        <div
           className={`${
             menuOpen ? "block" : "hidden"
           } w-full md:block md:w-auto navbar-end`}
         >
-          <ul className="menu menu-horizontal px-1">
+          <ul className="font-medium flex flex-col p-4 md:p-0 mt-4  rounded-lg  md:flex-row md:space-x-8 md:mt-0">
             <li>
-              <button className="btn btn-ghost" type="button">Ask</button>
+              <button className="btn btn-ghost text-white" type="button">
+                Ask
+              </button>
             </li>
             <li>
-              <button className="btn btn-ghost" type="button">Login</button>
+              <button className="btn btn-ghost text-white" type="button">
+                Login
+              </button>
             </li>
             <li>
-              <button className="btn btn-ghost" type="button">Sign Up</button>
+              <button className="btn btn-ghost text-white" type="button">
+                Sign Up
+              </button>
             </li>
           </ul>
         </div>
-    </div>
+      </div>
+    </nav>
   );
 };
 

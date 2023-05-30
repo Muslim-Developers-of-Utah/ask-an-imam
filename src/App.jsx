@@ -1,12 +1,12 @@
-
-import './App.css'
 import NavBar from './components/NavBar'
+import SearchBar from './components/SearchBar'
 
 function App() {
 
   return (
-      <div>
+      <div className=''>
         <NavBar />
+        <SearchBar />
       </div>
     
   )
